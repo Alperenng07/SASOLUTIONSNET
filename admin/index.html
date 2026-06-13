@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASOLUTIONSNET - Admin Control Center</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body class="admin-theme">
+    <!-- Admin Shell Layout -->
+    <div class="admin-shell">
+        
+        <!-- Left Sidebar -->
+        <aside class="admin-sidebar">
+            <div class="sidebar-brand">
+                <a href="#" class="logo">
+                    <span class="logo-bold">SASOLUTIONS</span><span class="logo-light">NET</span><span class="logo-dot"></span>
+                </a>
+                <span class="brand-tag">CONTROL PANEL</span>
+            </div>
+            
+            <nav class="sidebar-nav">
+                <ul>
+                    <li>
+                        <button class="nav-btn active" data-target="overview">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="3" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="3" width="7" height="7"></rect>
+                                <rect x="14" y="14" width="7" height="7"></rect>
+                                <rect x="3" y="14" width="7" height="7"></rect>
+                            </svg>
+                            <span>Genel Bakış</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-btn" data-target="services">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                <polyline points="2 17 12 22 22 17"></polyline>
+                                <polyline points="2 12 12 17 22 12"></polyline>
+                            </svg>
+                            <span>Hizmetler</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-btn" data-target="projects">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                            <span>Projeler &amp; Yol Haritası</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-btn" data-target="ads">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="2" y1="10" x2="22" y2="10"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                            <span>Partnerler &amp; Reklamlar</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-btn" data-target="inbox">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <span>Mesaj Havuzu</span>
+                            <span class="inbox-badge" id="unreadCountBadge">0</span>
+                        </button>
+                    </li>
+                    <li>
+                        <button class="nav-btn" data-target="settings">
+                            <svg class="nav-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="3"></circle>
+                                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                            </svg>
+                            <span>Sistem Ayarları</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            
+            <div class="sidebar-footer">
+                <a href="../index.html" class="back-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    <span>Siteye Dön</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- Right Working Area -->
+        <main class="admin-main">
+            
+            <!-- Top Bar / Navbar -->
+            <header class="admin-topbar">
+                <h2 class="module-title" id="moduleTitle">Genel Bakış</h2>
+                
+                <div class="topbar-actions">
+                    <div class="admin-user-profile">
+                        <div class="user-avatar" id="topbarAvatar">SA</div>
+                        <div class="user-info">
+                            <span class="user-name" id="topbarUsername">admin</span>
+                            <span class="user-role">Sistem Yöneticisi</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dynamic Modules Container -->
+            <div class="admin-content-scroll">
+                
+                <!-- 1. Overview Module -->
+                <section class="module-section active" id="overview-module">
+                    <!-- KPI Cards Grid -->
+                    <div class="kpi-grid">
+                        <div class="kpi-card">
+                            <div class="kpi-icon-wrap bg-cyan">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                                    <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="kpi-data">
+                                <span class="kpi-lbl">Toplam Proje</span>
+                                <h3 class="kpi-num" id="kpi-projects">5</h3>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card">
+                            <div class="kpi-icon-wrap bg-purple">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                                    <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                                </svg>
+                            </div>
+                            <div class="kpi-data">
+                                <span class="kpi-lbl">Aktif Hizmet</span>
+                                <h3 class="kpi-num" id="kpi-services">4</h3>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card">
+                            <div class="kpi-icon-wrap bg-blue">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                                    <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                </svg>
+                            </div>
+                            <div class="kpi-data">
+                                <span class="kpi-lbl">Aktif Reklam</span>
+                                <h3 class="kpi-num" id="kpi-ads">2</h3>
+                            </div>
+                        </div>
+
+                        <div class="kpi-card">
+                            <div class="kpi-icon-wrap bg-green">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="24" height="24">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                </svg>
+                            </div>
+                            <div class="kpi-data">
+                                <span class="kpi-lbl">Okunmamış Mesaj</span>
+                                <h3 class="kpi-num" id="kpi-messages">0</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Double Column Grid (Stats charts and logs) -->
+                    <div class="overview-grid">
+                        <div class="overview-panel">
+                            <div class="panel-header">
+                                <h4>Yol Haritası Dağılımı</h4>
+                            </div>
+                            <div class="panel-body">
+                                <div class="chart-container">
+                                    <!-- Dynamic Progress Rings -->
+                                    <div class="ring-row">
+                                        <div class="progress-ring-card">
+                                            <div class="ring-circle-box" style="--percent: 40; --color: var(--accent-cyan);">
+                                                <svg>
+                                                    <circle cx="35" cy="35" r="30"></circle>
+                                                    <circle cx="35" cy="35" r="30"></circle>
+                                                </svg>
+                                                <span class="ring-num">40%</span>
+                                            </div>
+                                            <span class="ring-lbl">Tamamlandı</span>
+                                        </div>
+                                        <div class="progress-ring-card">
+                                            <div class="ring-circle-box" style="--percent: 40; --color: var(--accent-blue);">
+                                                <svg>
+                                                    <circle cx="35" cy="35" r="30"></circle>
+                                                    <circle cx="35" cy="35" r="30"></circle>
+                                                </svg>
+                                                <span class="ring-num">40%</span>
+                                            </div>
+                                            <span class="ring-lbl">Devam Ediyor</span>
+                                        </div>
+                                        <div class="progress-ring-card">
+                                            <div class="ring-circle-box" style="--percent: 20; --color: var(--accent-purple);">
+                                                <svg>
+                                                    <circle cx="35" cy="35" r="30"></circle>
+                                                    <circle cx="35" cy="35" r="30"></circle>
+                                                </svg>
+                                                <span class="ring-num">20%</span>
+                                            </div>
+                                            <span class="ring-lbl">Yakında</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Recent Messages list in dashboard -->
+                        <div class="overview-panel">
+                            <div class="panel-header">
+                                <h4>Son Gelen İletişim Mesajları</h4>
+                                <button class="btn-text-link" onclick="switchModule('inbox')">Tümünü Gör</button>
+                            </div>
+                            <div class="panel-body">
+                                <div class="mini-messages-list" id="miniMessagesList">
+                                    <!-- Populated dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 2. Services Module -->
+                <section class="module-section" id="services-module">
+                    <div class="panel-actions-bar">
+                        <button class="btn btn-primary" onclick="openServiceEditor()">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            Yeni Hizmet Ekle
+                        </button>
+                    </div>
+
+                    <div class="admin-table-card">
+                        <table class="admin-table" id="servicesTable">
+                            <thead>
+                                <tr>
+                                    <th>İkon</th>
+                                    <th>Hizmet Adı (TR)</th>
+                                    <th>Hizmet Adı (EN)</th>
+                                    <th>Kısa Tanıtım (TR)</th>
+                                    <th>Aksiyonlar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 3. Projects Module -->
+                <section class="module-section" id="projects-module">
+                    <div class="panel-actions-bar">
+                        <button class="btn btn-primary" onclick="openProjectEditor()">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            Yeni Proje Ekle
+                        </button>
+                    </div>
+
+                    <div class="admin-table-card">
+                        <table class="admin-table" id="projectsTable">
+                            <thead>
+                                <tr>
+                                    <th>Proje Adı (TR)</th>
+                                    <th>Proje Adı (EN)</th>
+                                    <th>Durum</th>
+                                    <th>Oran</th>
+                                    <th>Aksiyonlar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 4. Ads Module -->
+                <section class="module-section" id="ads-module">
+                    <div class="panel-actions-bar">
+                        <button class="btn btn-primary" onclick="openAdEditor()">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                            Yeni Reklam / Partner Ekle
+                        </button>
+                    </div>
+
+                    <div class="admin-table-card">
+                        <table class="admin-table" id="adsTable">
+                            <thead>
+                                <tr>
+                                    <th>Partner Şirket</th>
+                                    <th>Reklam Pozisyonu</th>
+                                    <th>Durum</th>
+                                    <th>Bitiş Tarihi</th>
+                                    <th>Aksiyonlar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Populated dynamically -->
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <!-- 5. Inbox Module (Split Pane) -->
+                <section class="module-section" id="inbox-module">
+                    <div class="inbox-split-layout">
+                        <!-- Left Inbox Thread List -->
+                        <div class="inbox-sidebar-list" id="inboxThreadList">
+                            <!-- Populated dynamically -->
+                        </div>
+
+                        <!-- Right Inbox Reader -->
+                        <div class="inbox-reader-panel" id="inboxReaderPanel">
+                            <div class="reader-empty-state">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" width="48" height="48">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <p>Detayları okumak için listeden bir mesaj seçin.</p>
+                            </div>
+                            
+                            <!-- Dynamic Content Container -->
+                            <div class="reader-content-wrap" id="readerContentWrap" style="display: none;">
+                                <div class="reader-header">
+                                    <div class="reader-meta">
+                                        <h4 class="reader-sender" id="readerSender">Süleyman Arslan</h4>
+                                        <a href="mailto:suleyman@example.com" class="reader-email" id="readerEmail">suleyman@example.com</a>
+                                        <span class="reader-date" id="readerDate">2026-06-07 00:25</span>
+                                    </div>
+                                    <div class="reader-actions">
+                                        <button class="btn btn-secondary btn-sm" id="btnMarkUnread">Okunmadı Yap</button>
+                                        <button class="btn btn-secondary btn-sm" id="btnArchive">Arşivle</button>
+                                    </div>
+                                </div>
+                                <div class="reader-body">
+                                    <p id="readerMessageText">Bu bir deneme mesajı içeriğidir.</p>
+                                </div>
+                                
+                                <!-- Fast Reply Panel -->
+                                <div class="reader-reply-box">
+                                    <h5>Hızlı Yanıtla</h5>
+                                    <form id="inboxReplyForm">
+                                        <textarea rows="3" placeholder="Yanıtınızı buraya yazın..." required></textarea>
+                                        <button type="submit" class="btn btn-primary btn-sm">Gönder</button>
+                                    </form>
+                                    <div class="form-feedback success" id="replySuccess">Yanıt başarıyla simüle edilerek gönderildi!</div>
+                                </div>
+                            </div>
+                        </div>
+                </section>
+
+                <!-- 6. Settings Module -->
+                <section class="module-section" id="settings-module">
+                    <div class="admin-table-card" style="max-width: 650px; margin: 0 auto; padding: 40px;">
+                        <h4 style="font-family: var(--font-title); font-size: 1.25rem; margin-bottom: 24px;">İletişim &amp; Sistem Bilgileri</h4>
+                        
+                        <form id="settingsForm" class="modal-form" novalidate>
+                            <div class="form-lang-toggle" style="padding: 0 0 16px; margin-bottom: 24px; background:transparent;">
+                                <span class="form-lang-lbl">Form Dili:</span>
+                                <div class="lang-tab-buttons">
+                                    <button type="button" class="lang-tab active" data-lang="tr" onclick="toggleFormLanguage('settingsForm', 'tr')">TR</button>
+                                    <button type="button" class="lang-tab" data-lang="en" onclick="toggleFormLanguage('settingsForm', 'en')">EN</button>
+                                </div>
+                            </div>
+
+                            <div style="display:flex; flex-direction:column; gap:20px;">
+                                <div class="form-group">
+                                    <label for="settings_email">Genel İletişim E-postası</label>
+                                    <input type="email" id="settings_email" required placeholder="info@sasolutionsnet.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="settings_phone">Genel Telefon Numarası</label>
+                                    <input type="text" id="settings_phone" required placeholder="+90 (212) 000 00 00">
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Genel Ofis Adresi <span class="lang-badge">TR</span></label>
+                                    <textarea id="settings_address_tr" class="lang-field tr-field" rows="3" required placeholder="Maslak Teknokent..."></textarea>
+                                    <textarea id="settings_address_en" class="lang-field en-field" rows="3" required placeholder="Maslak Teknokent..." style="display: none;"></textarea>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary" style="margin-top:12px; width:fit-content;">Değişiklikleri Kaydet</button>
+                                <div class="form-feedback success" id="settingsSuccess" style="margin-top: 12px;">Ayarlar başarıyla kaydedildi ve vitrin sitesiyle senkronize edildi!</div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- PROJECT EDITOR MODAL -->
+    <div class="admin-modal-overlay" id="projectModal">
+        <div class="admin-modal-card">
+            <div class="modal-card-header">
+                <h4 id="projectModalTitle">Yeni Proje Ekle</h4>
+                <button class="modal-card-close" onclick="closeProjectEditor()">&times;</button>
+            </div>
+            
+            <form id="projectForm" class="modal-form" novalidate>
+                <!-- Global Translation Toggle for Form Editor -->
+                <div class="form-lang-toggle">
+                    <span class="form-lang-lbl">Form Dili:</span>
+                    <div class="lang-tab-buttons">
+                        <button type="button" class="lang-tab active" data-lang="tr" onclick="toggleFormLanguage('projectForm', 'tr')">TR</button>
+                        <button type="button" class="lang-tab" data-lang="en" onclick="toggleFormLanguage('projectForm', 'en')">EN</button>
+                    </div>
+                </div>
+
+                <!-- Input Fields with Language Switch wrappers -->
+                <div class="form-scroll-area">
+                    <!-- Project Title (TR/EN) -->
+                    <div class="form-group">
+                        <label>Proje Başlığı <span class="lang-badge">TR</span></label>
+                        <input type="text" id="proj_title_tr" class="lang-field tr-field" required placeholder="Örn: E-Ticaret Entegrasyonu">
+                        <input type="text" id="proj_title_en" class="lang-field en-field" required placeholder="Example: E-Commerce Sync" style="display: none;">
+                    </div>
+
+                    <!-- Project Description (TR/EN) -->
+                    <div class="form-group">
+                        <label>Kısa Açıklama <span class="lang-badge">TR</span></label>
+                        <textarea id="proj_desc_tr" class="lang-field tr-field" rows="2" required placeholder="Arama sonuçlarında ve listelerde görünecek özet..."></textarea>
+                        <textarea id="proj_desc_en" class="lang-field en-field" rows="2" required placeholder="Short description for grid listings..." style="display: none;"></textarea>
+                    </div>
+
+                    <!-- Non-localized Technical parameters -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="proj_status">Proje Durumu</label>
+                            <select id="proj_status" required onchange="handleProjectStatusChange()">
+                                <option value="completed">Tamamlandı</option>
+                                <option value="ongoing">Devam Ediyor</option>
+                                <option value="upcoming">Yakında</option>
+                            </select>
+                        </div>
+                        <div class="form-group" id="proj_progress_wrap">
+                            <label for="proj_progress">İlerleme Oranı (<span id="progress_val_display">100</span>%)</label>
+                            <input type="range" id="proj_progress" min="0" max="100" value="100" oninput="document.getElementById('progress_val_display').textContent = this.value">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proj_tags">Teknolojiler (Virgülle ayırın)</label>
+                        <input type="text" id="proj_tags" placeholder="React, Node.js, AWS">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="proj_url">Proje Linki (Canlı Adres)</label>
+                        <input type="url" id="proj_url" placeholder="https://sasolutionsnet.com">
+                    </div>
+                </div>
+
+                <div class="modal-card-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeProjectEditor()">Vazgeç</button>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- SERVICE EDITOR MODAL -->
+    <div class="admin-modal-overlay" id="serviceModal">
+        <div class="admin-modal-card">
+            <div class="modal-card-header">
+                <h4 id="serviceModalTitle">Hizmet Ekle / Düzenle</h4>
+                <button class="modal-card-close" onclick="closeServiceEditor()">&times;</button>
+            </div>
+            
+            <form id="serviceForm" class="modal-form" novalidate>
+                <div class="form-lang-toggle">
+                    <span class="form-lang-lbl">Form Dili:</span>
+                    <div class="lang-tab-buttons">
+                        <button type="button" class="lang-tab active" data-lang="tr" onclick="toggleFormLanguage('serviceForm', 'tr')">TR</button>
+                        <button type="button" class="lang-tab" data-lang="en" onclick="toggleFormLanguage('serviceForm', 'en')">EN</button>
+                    </div>
+                </div>
+
+                <div class="form-scroll-area">
+                    <div class="form-group">
+                        <label>Hizmet Adı <span class="lang-badge">TR</span></label>
+                        <input type="text" id="service_name_tr" class="lang-field tr-field" required placeholder="Hizmet Adı">
+                        <input type="text" id="service_name_en" class="lang-field en-field" required placeholder="Service Name" style="display: none;">
+                    </div>
+
+                    <div class="form-group">
+                        <label>Kısa Tanıtım <span class="lang-badge">TR</span></label>
+                        <textarea id="service_desc_tr" class="lang-field tr-field" rows="2" required placeholder="Kısa tanıtım metni"></textarea>
+                        <textarea id="service_desc_en" class="lang-field en-field" rows="2" required placeholder="Short summary text" style="display: none;"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service_icon">İkon Seçimi</label>
+                        <select id="service_icon" required>
+                            <option value="web">Web Teknolojileri (Monitör)</option>
+                            <option value="mobile">Mobil Uygulamalar (Telefon)</option>
+                            <option value="cloud">Bulut &amp; DevOps (Bulut)</option>
+                            <option value="ai">Yapay Zeka (Küp)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="modal-card-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeServiceEditor()">Vazgeç</button>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- AD/PARTNER EDITOR MODAL -->
+    <div class="admin-modal-overlay" id="adModal">
+        <div class="admin-modal-card">
+            <div class="modal-card-header">
+                <h4 id="adModalTitle">Yeni Reklam / Partner Ekle</h4>
+                <button class="modal-card-close" onclick="closeAdEditor()">&times;</button>
+            </div>
+            
+            <form id="adForm" class="modal-form" novalidate>
+                <div class="form-scroll-area">
+                    <div class="form-group">
+                        <label for="ad_partner">Partner Şirket Adı</label>
+                        <input type="text" id="ad_partner" required placeholder="Örn: GlobalTech Systems">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="ad_target">Hedef URL (Link)</label>
+                        <input type="url" id="ad_target" required placeholder="https://partnerdomain.com">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ad_position">Reklam Pozisyonu</label>
+                            <select id="ad_position" required>
+                                <option value="Anasayfa Banner">Anasayfa Banner</option>
+                                <option value="Yan Panel">Yan Panel</option>
+                                <option value="Footer Banner">Footer Banner</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ad_expiry">Bitiş Tarihi</label>
+                            <input type="date" id="ad_expiry" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-card-footer">
+                    <button type="button" class="btn btn-secondary" onclick="closeAdEditor()">Vazgeç</button>
+                    <button type="submit" class="btn btn-primary">Kaydet</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- LOGIN SCREEN OVERLAY -->
+    <div class="login-overlay" id="loginOverlay">
+        <div class="login-card">
+            <div class="login-card-header">
+                <div class="logo">
+                    <span class="logo-bold">SASOLUTIONS</span><span class="logo-light">NET</span><span class="logo-dot"></span>
+                </div>
+                <span class="brand-tag" style="margin-top: 5px;">YÖNETİCİ GİRİŞİ / ADMIN SIGN IN</span>
+            </div>
+            
+            <form id="loginForm" class="modal-form" style="margin-top: 10px;">
+                <div class="form-group" style="gap: 8px; margin-bottom: 20px;">
+                    <label for="login_user">Kullanıcı Adı / Username</label>
+                    <input type="text" id="login_user" required placeholder="admin" autocomplete="username">
+                </div>
+                
+                <div class="form-group" style="gap: 8px; margin-bottom: 24px;">
+                    <label for="login_pass">Şifre / Password</label>
+                    <input type="password" id="login_pass" required placeholder="••••••••" autocomplete="current-password">
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block" id="loginSubmitBtn">
+                    <span class="btn-text">Giriş Yap / Login</span>
+                    <div class="spinner"></div>
+                </button>
+                
+                <div class="form-feedback error" id="loginError" style="margin-top: 16px; display: none; background: rgba(239, 68, 68, 0.08); border: 1px solid rgba(239, 68, 68, 0.2); color: #ef4444; padding: 12px; border-radius: 6px; font-weight: 500;">
+                    Kullanıcı adı veya şifre hatalı!
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="admin-script.js"></script>
+</body>
+</html>

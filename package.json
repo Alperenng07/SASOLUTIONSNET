@@ -1,0 +1,17 @@
+{
+  "name": "sasolutionsnet-backend",
+  "version": "1.0.0",
+  "description": "Full-stack backend service for SASOLUTIONSNET showcase site",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.5.0"
+  },
+  "author": "SASOLUTIONSNET",
+  "license": "ISC"
+}

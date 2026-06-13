@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASOLUTIONSNET - Visionary Technology Solutions</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Glow Blobs -->
+    <div class="glow-blob glow-blob-1"></div>
+    <div class="glow-blob glow-blob-2"></div>
+    <div class="glow-blob glow-blob-3"></div>
+
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-bold">SASOLUTIONS</span><span class="logo-light">NET</span><span class="logo-dot"></span>
+            </a>
+            
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#hero" class="nav-link active" data-i18n="nav_home">Ana Sayfa</a></li>
+                    <li><a href="#services" class="nav-link" data-i18n="nav_services">Hizmetler</a></li>
+                    <li><a href="#portfolio" class="nav-link" data-i18n="nav_portfolio">Portföy</a></li>
+                    <li><a href="#partners" class="nav-link" data-i18n="nav_partners">Partnerler</a></li>
+                    <li><a href="#contact" class="nav-link" data-i18n="nav_contact">İletişim</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <!-- Language Switcher Toggle -->
+                <button class="lang-toggle" id="langToggle" aria-label="Change Language">
+                    <span class="lang-txt active" id="langTR">TR</span>
+                    <span class="lang-separator">/</span>
+                    <span class="lang-txt" id="langEN">EN</span>
+                </button>
+                
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span data-i18n="hero_badge">Yeni Nesil Teknoloji İş Ortağınız</span>
+                </div>
+                <h1 class="hero-title" id="heroTitle">
+                    <span data-i18n="hero_title_1">Geleceğin Dijital</span><br>
+                    <span class="gradient-text" data-i18n="hero_title_2">Altyapısını İnşa Ediyoruz</span>
+                </h1>
+                <p class="hero-description" data-i18n="hero_desc">
+                    SASOLUTIONSNET olarak, kurumsal işletmeler için ölçeklenebilir, modern ve yapay zeka destekli yazılım çözümleri üretiyoruz. İşinizi dijital çağın ilerisine taşıyoruz.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#services" class="btn btn-primary" data-i18n="hero_btn_primary">Hizmetlerimizi İnceleyin</a>
+                    <a href="#contact" class="btn btn-secondary" data-i18n="hero_btn_secondary">İletişime Geçin</a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="visual-container">
+                    <div class="visual-card-glow"></div>
+                    <div class="visual-box">
+                        <!-- Futuristic UI mock -->
+                        <div class="mock-header">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                            <span class="mock-title">sasolutionsnet_dashboard.config</span>
+                        </div>
+                        <div class="mock-body">
+                            <pre><code><span class="code-keyword">const</span> technologyStack = {
+  backend: <span class="code-string">"Node.js / Go / Python"</span>,
+  frontend: <span class="code-string">"React / Next.js / Vanilla JS"</span>,
+  cloud: <span class="code-string">"AWS / GCP / Docker / K8s"</span>,
+  ai: <span class="code-string">"TensorFlow / PyTorch / LLMs"</span>
+};
+
+<span class="code-keyword">function</span> <span class="code-func">deployInnovation</span>(partner) {
+  console.log(<span class="code-string">`Scaling client projects...`</span>);
+  <span class="code-keyword">return</span> <span class="code-keyword">true</span>;
+}</code></pre>
+                        </div>
+                    </div>
+                    <!-- Decorative micro-elements -->
+                    <div class="floating-stat float-1">
+                        <span class="stat-num">99.9%</span>
+                        <span class="stat-lbl" data-i18n="stat_uptime">Uptime Garantisi</span>
+                    </div>
+                    <div class="floating-stat float-2">
+                        <span class="stat-num">15+</span>
+                        <span class="stat-lbl" data-i18n="stat_countries">Ülkeye İhracat</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="services_title">Neler Yapıyoruz?</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-i18n="services_subtitle">
+                    Vizyoner fikirlerinizi hayata geçirmek için en son teknoloji yığınlarını kullanıyor ve üst düzey çözümler geliştiriyoruz.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <!-- Service Card 1 -->
+                <div class="service-card" data-service="web">
+                    <div class="card-border-gradient"></div>
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="service_web_title">Web Teknolojileri</h3>
+                    <p class="service-desc" data-i18n="service_web_desc">
+                        Ölçeklenebilir, yüksek performanslı ve modern web uygulamaları, SaaS platformları ve kurumsal portallar.
+                    </p>
+                    <span class="service-more">
+                        <span data-i18n="service_learn_more">Detayları İncele</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="service-card" data-service="mobile">
+                    <div class="card-border-gradient"></div>
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
+                            <line x1="12" y1="18" x2="12.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="service_mobile_title">Mobil Uygulamalar</h3>
+                    <p class="service-desc" data-i18n="service_mobile_desc">
+                        iOS ve Android platformlarında yerel (native) ve hibrit teknolojilerle geliştirilmiş, akıcı kullanıcı deneyimli uygulamalar.
+                    </p>
+                    <span class="service-more">
+                        <span data-i18n="service_learn_more">Detayları İncele</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="service-card" data-service="cloud">
+                    <div class="card-border-gradient"></div>
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="service_cloud_title">Bulut &amp; DevOps</h3>
+                    <p class="service-desc" data-i18n="service_cloud_desc">
+                        Yüksek erişilebilirlik sunan AWS/GCP mimarileri, CI/CD süreç optimizasyonları ve Kubernetes entegrasyonları.
+                    </p>
+                    <span class="service-more">
+                        <span data-i18n="service_learn_more">Detayları İncele</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                </div>
+
+                <!-- Service Card 4 -->
+                <div class="service-card" data-service="ai">
+                    <div class="card-border-gradient"></div>
+                    <div class="service-icon-wrapper">
+                        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                            <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                            <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h3 class="service-title" data-i18n="service_ai_title">Yapay Zeka &amp; Büyük Veri</h3>
+                    <p class="service-desc" data-i18n="service_ai_desc">
+                        Özel makine öğrenimi modelleri, doğal dil işleme çözümleri ve verilerinizden anlamlı içgörüler üreten analitik sistemler.
+                    </p>
+                    <span class="service-more">
+                        <span data-i18n="service_learn_more">Detayları İncele</span>
+                        <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio-section" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="portfolio_title">Proje Vitrini</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle" data-i18n="portfolio_subtitle">
+                    Geliştirdiğimiz yenilikçi projeleri, aktif süreçlerimizi ve yakın gelecekte hayat bulacak planlarımızı inceleyin.
+                </p>
+            </div>
+
+            <!-- Tabs / Filter Buttons -->
+            <div class="portfolio-tabs">
+                <button class="tab-btn active" data-tab="completed" data-i18n="portfolio_tab_completed">Tamamlanan Projeler</button>
+                <button class="tab-btn" data-tab="ongoing" data-i18n="portfolio_tab_ongoing">Devam Edenler</button>
+                <button class="tab-btn" data-tab="upcoming" data-i18n="portfolio_tab_upcoming">Yakında</button>
+            </div>
+
+            <!-- Portfolio Grid -->
+            <div class="portfolio-grid" id="portfolioGrid">
+                <!-- Cards will be populated and filtered dynamically via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners & Ad Space Section -->
+    <section class="partners-section" id="partners">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-i18n="partners_title">Partnerler &amp; Sponsorluklar</h2>
+                <div class="section-divider"></div>
+            </div>
+            
+            <!-- Partners Infinite Marquee Carousel -->
+            <div class="partners-marquee-wrapper">
+                <div class="marquee-track" id="marqueeTrack">
+                    <!-- Partner items will be duplicated by JS for seamless infinite loop -->
+                    <div class="partner-item"><span class="partner-logo-mock">GLOBALTECH</span></div>
+                    <div class="partner-item"><span class="partner-logo-mock">NEBULA_SYS</span></div>
+                    <div class="partner-item"><span class="partner-logo-mock">QUANTUM_LAB</span></div>
+                    <div class="partner-item"><span class="partner-logo-mock">VERTEX_AI</span></div>
+                    <div class="partner-item"><span class="partner-logo-mock">APEX_NET</span></div>
+                    <div class="partner-item"><span class="partner-logo-mock">NEXUS_DEV</span></div>
+                </div>
+            </div>
+
+            <!-- Ad Space / Banner Area -->
+            <div class="ad-grid">
+                <!-- Ad Banner 1 (Internal Consulting Ad) -->
+                <div class="ad-banner banner-gradient-blue">
+                    <div class="ad-badge" data-i18n="ad_sponsored">SPONSORLU</div>
+                    <div class="ad-content">
+                        <h4 class="ad-title" data-i18n="ad_1_title">Kurumsal Bulut Dönüşümü</h4>
+                        <p class="ad-desc" data-i18n="ad_1_desc">Altyapınızı AWS sertifikalı uzmanlarımızla modernize edin. Maliyetleri %40'a varan oranda düşürün.</p>
+                        <a href="#contact" class="ad-cta btn-ad" data-i18n="ad_1_cta">Hemen Görüşelim</a>
+                    </div>
+                </div>
+
+                <!-- Ad Banner 2 (Internal Hiring/Partnership Ad) -->
+                <div class="ad-banner banner-gradient-purple">
+                    <div class="ad-badge" data-i18n="ad_announcement">DUYURU</div>
+                    <div class="ad-content">
+                        <h4 class="ad-title" data-i18n="ad_2_title">Teknoloji İş Ortağımız Olun</h4>
+                        <p class="ad-desc" data-i18n="ad_2_desc">SASOLUTIONSNET ekosistemine dahil olarak küresel projelerde birlikte değer yaratalım.</p>
+                        <a href="#contact" class="ad-cta btn-ad" data-i18n="ad_2_cta">Başvuru Yap</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Media & Contact Section -->
+    <section class="contact-section" id="contact">
+        <div class="container contact-container">
+            <!-- Contact Left: Form -->
+            <div class="contact-form-wrapper">
+                <h3 class="contact-form-title" data-i18n="contact_title">Bizimle İletişime Geçin</h3>
+                <p class="contact-form-desc" data-i18n="contact_subtitle">Projeniz hakkında konuşmak veya bilgi almak için aşağıdaki formu doldurabilirsiniz.</p>
+                
+                <form id="contactForm" class="contact-form" novalidate>
+                    <div class="input-group">
+                        <input type="text" id="formName" required placeholder=" " autocomplete="off">
+                        <label for="formName" data-i18n="contact_name">Adınız Soyadınız</label>
+                        <span class="error-msg" data-i18n="err_name">Geçerli bir ad giriniz (en az 3 karakter)</span>
+                    </div>
+
+                    <div class="input-group">
+                        <input type="email" id="formEmail" required placeholder=" " autocomplete="off">
+                        <label for="formEmail" data-i18n="contact_email">E-posta Adresiniz</label>
+                        <span class="error-msg" data-i18n="err_email">Geçerli bir e-posta adresi giriniz</span>
+                    </div>
+
+                    <div class="input-group">
+                        <textarea id="formMessage" rows="4" required placeholder=" "></textarea>
+                        <label for="formMessage" data-i18n="contact_message">Mesajınız</label>
+                        <span class="error-msg" data-i18n="err_message">Mesaj alanı boş bırakılamaz</span>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-block" id="formSubmitBtn">
+                        <span class="btn-text" data-i18n="contact_send">Gönder</span>
+                        <div class="spinner"></div>
+                    </button>
+                    
+                    <div class="form-feedback success" id="formSuccess" data-i18n="form_success">
+                        Mesajınız başarıyla gönderildi! Sizinle en kısa sürede iletişime geçeceğiz.
+                    </div>
+                </form>
+            </div>
+
+            <!-- Contact Right: Details & Visual Map -->
+            <div class="contact-details-wrapper">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label">Email</span>
+                            <a href="mailto:info@sasolutionsnet.com" class="info-link" id="showcase_email">info@sasolutionsnet.com</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label" data-i18n="info_phone">Telefon</span>
+                            <a href="tel:+902120000000" class="info-link" id="showcase_phone">+90 (212) 000 00 00</a>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <div class="info-content">
+                            <span class="info-label" data-i18n="info_address">Adres</span>
+                            <span class="info-text" id="showcase_address">Maslak Teknokent, Kat: 4, Sarıyer / İstanbul</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Vector World Map showcasing global operations -->
+                <div class="world-map-container">
+                    <div class="map-overlay-txt" data-i18n="map_label">Küresel Hizmet Ağı</div>
+                    <!-- Styled Abstract SVG Map with glowing node hotspots -->
+                    <svg class="world-map-svg" viewBox="0 0 1000 480">
+                        <!-- Simplified background map paths representing land masses -->
+                        <path d="M150,150 Q180,120 220,160 T300,140 T320,180 Z" fill="rgba(255,255,255,0.05)" />
+                        <path d="M450,180 Q480,140 520,170 T600,130 T650,190 Z" fill="rgba(255,255,255,0.05)" />
+                        <path d="M700,200 Q740,160 800,220 T900,180 T950,230 Z" fill="rgba(255,255,255,0.05)" />
+                        <path d="M220,300 Q260,280 300,340 T350,380 Z" fill="rgba(255,255,255,0.05)" />
+                        <path d="M550,320 Q590,290 620,350 T700,390 Z" fill="rgba(255,255,255,0.05)" />
+                        
+                        <!-- Network connection lines -->
+                        <path d="M220,160 Q380,130 520,170" stroke="rgba(0, 242, 254, 0.15)" stroke-width="1.5" fill="none" stroke-dasharray="5 5" />
+                        <path d="M520,170 Q660,150 800,220" stroke="rgba(112, 0, 255, 0.15)" stroke-width="1.5" fill="none" stroke-dasharray="5 5" />
+                        <path d="M520,170 Q430,280 300,340" stroke="rgba(0, 242, 254, 0.15)" stroke-width="1.5" fill="none" stroke-dasharray="5 5" />
+
+                        <!-- Location Hotspots -->
+                        <!-- Istanbul (Center Node) -->
+                        <g class="map-hotspot" transform="translate(520, 170)">
+                            <circle class="ping" r="15"></circle>
+                            <circle class="dot" r="6"></circle>
+                            <text class="tooltip" x="12" y="4">HQ - Istanbul</text>
+                        </g>
+                        <!-- London -->
+                        <g class="map-hotspot" transform="translate(480, 120)">
+                            <circle class="ping" r="10"></circle>
+                            <circle class="dot" r="4"></circle>
+                            <text class="tooltip" x="10" y="4">London</text>
+                        </g>
+                        <!-- New York -->
+                        <g class="map-hotspot" transform="translate(220, 160)">
+                            <circle class="ping" r="12"></circle>
+                            <circle class="dot" r="5"></circle>
+                            <text class="tooltip" x="10" y="4">New York</text>
+                        </g>
+                        <!-- Tokyo -->
+                        <g class="map-hotspot" transform="translate(850, 180)">
+                            <circle class="ping" r="10"></circle>
+                            <circle class="dot" r="4"></circle>
+                            <text class="tooltip" x="10" y="4">Tokyo</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-info">
+                <a href="#" class="logo footer-logo">
+                    <span class="logo-bold">SASOLUTIONS</span><span class="logo-light">NET</span><span class="logo-dot"></span>
+                </a>
+                <p class="footer-desc" data-i18n="footer_desc">
+                    Geleceğin teknolojisini tasarlayan, kurumsal ve vizyoner teknoloji şirketi.
+                </p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                            <rect x="2" y="9" width="4" height="12"></rect>
+                            <circle cx="4" cy="4" r="2"></circle>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-links-grid">
+                <div class="footer-link-group">
+                    <h5 data-i18n="footer_grp_links">Hızlı Linkler</h5>
+                    <ul>
+                        <li><a href="#hero" data-i18n="nav_home">Ana Sayfa</a></li>
+                        <li><a href="#services" data-i18n="nav_services">Hizmetler</a></li>
+                        <li><a href="#portfolio" data-i18n="nav_portfolio">Portföy</a></li>
+                        <li><a href="#contact" data-i18n="nav_contact">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-link-group">
+                    <h5 data-i18n="footer_grp_services">Hizmetlerimiz</h5>
+                    <ul>
+                        <li><a href="#services" data-i18n="service_web_title">Web Teknolojileri</a></li>
+                        <li><a href="#services" data-i18n="service_mobile_title">Mobil Uygulamalar</a></li>
+                        <li><a href="#services" data-i18n="service_cloud_title">Bulut &amp; DevOps</a></li>
+                        <li><a href="#services" data-i18n="service_ai_title">Yapay Zeka &amp; Büyük Veri</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p>&copy; 2026 SASOLUTIONSNET. <span data-i18n="footer_copy">Tüm Hakları Saklıdır.</span></p>
+                <div class="footer-legal">
+                    <a href="#" id="adminPanelLink" data-i18n="footer_admin" onclick="openAdminLoginModal(event)">Yönetici Paneli</a>
+                    <span class="dot-separator"></span>
+                    <a href="#" data-i18n="footer_privacy">Gizlilik Politikası</a>
+                    <span class="dot-separator"></span>
+                    <a href="#" data-i18n="footer_terms">Kullanım Şartları</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Service Detail Modals (Popups) -->
+    <div class="modal-overlay" id="serviceModal">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose" aria-label="Close Modal">&times;</button>
+            <div class="modal-body-content" id="modalBody">
+                <!-- Dynamically populated by JS based on selected service -->
+            </div>
+        </div>
+    </div>
+
+    <!-- ADMIN LOGIN GATE MODAL -->
+    <div class="admin-gate-overlay" id="adminGateOverlay" role="dialog" aria-modal="true" aria-label="Yönetici Girişi">
+        <div class="admin-gate-card">
+            <button class="admin-gate-close" onclick="closeAdminLoginModal()" aria-label="Kapat">&times;</button>
+
+            <div class="admin-gate-logo">
+                <span class="logo-bold">SASOLUTIONS</span><span class="logo-light">NET</span><span class="logo-dot"></span>
+            </div>
+            <p class="admin-gate-subtitle">YÖNETİCİ GİRİŞİ &nbsp;/&nbsp; ADMIN SIGN IN</p>
+
+            <form id="adminGateForm" novalidate>
+                <div class="admin-gate-field">
+                    <label for="gate_user">Kullanıcı Adı</label>
+                    <div class="gate-input-wrap">
+                        <svg class="gate-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <input type="text" id="gate_user" placeholder="admin" autocomplete="username" required>
+                    </div>
+                </div>
+                <div class="admin-gate-field">
+                    <label for="gate_pass">Şifre</label>
+                    <div class="gate-input-wrap">
+                        <svg class="gate-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                        <input type="password" id="gate_pass" placeholder="••••••••" autocomplete="current-password" required>
+                    </div>
+                </div>
+
+                <div class="admin-gate-error" id="adminGateError">Kullanıcı adı veya şifre hatalı!</div>
+
+                <button type="submit" class="admin-gate-btn" id="adminGateBtn">
+                    <span class="gate-btn-text">Giriş Yap</span>
+                    <div class="gate-spinner"></div>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
